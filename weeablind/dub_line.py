@@ -1,8 +1,8 @@
 from dataclasses import dataclass
-from Voice import Voice
+from .Voice import Voice
 import ffmpeg
-import utils
-import app_state
+from . import utils
+from . import app_state
 import srt
 from re import compile, sub as substitute
 from pydub import AudioSegment

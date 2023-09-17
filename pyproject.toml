@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weeablind"
+version = "0.2"
+description = "A program to dub multi-lingual media and anime using modern AI speech synthesis, diarization, language identification, and voice cloning."
+authors = [    {name = "Tessa Painter", email = "tessa@tessapainter.com"}
+]
+
+dependencies = [
+"tts",
+"ffmpeg-python",
+"srt",
+"py-espeak-ng",
+"pydub",
+"wxpython",
+"pyttsx3",
+"yt-dlp",
+"audiotsm",
+"speechbrain"
+]
+
+
+[project.optional-dependencies]
+windows = [
+ "pyAudio"
+]
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[tool.poetry.dependencies.optional]
+windows = [
+    { name = "pyAudio", sys_platform = "win32" }
+]

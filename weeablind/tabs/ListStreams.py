@@ -1,5 +1,5 @@
 import wx
-import app_state
+from .. import app_state
 import ffmpeg
 
 class ListStreamsTab(wx.Panel):

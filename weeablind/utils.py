@@ -1,5 +1,5 @@
 import os.path
-import app_state
+from . import app_state
 import numpy as np
 from pydub.playback import play
 from pydub import AudioSegment

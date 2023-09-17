@@ -5,9 +5,9 @@ The Video class represents a reference to a video from either a file or web link
 import time
 import ffmpeg
 from yt_dlp import YoutubeDL
-import utils
+from . import utils
 from pydub import AudioSegment
-from dub_line import load_subs, isnt_target_language
+from .dub_line import load_subs, isnt_target_language
 import json
 class Video:
 	def __init__(self, video_URL, loading_progress_hook=None):

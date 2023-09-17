@@ -2,9 +2,9 @@
 # These functions use a functional approach as I didn't wanted to group them and not bloat the video class with such specific functions
 # Perhaps going forward I should abstract diary entries as their own objects similar to dub_line, but I haven't decidded yet as diaries might be useful for voice cloning as well
 
-import app_state
-import utils
-from Voice import Voice
+from . import app_state
+from . import utils
+from .Voice import Voice
 from pyannote.audio import Pipeline
 import torchaudio.transforms as T
 import torchaudio

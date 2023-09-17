@@ -1,16 +1,14 @@
 import wx
 import wx.adv
-from Voice import Voice
+from .Voice import Voice
 from pydub import AudioSegment
 from pydub.playback import play
-from tabs.ConfigureVoiceTab import ConfigureVoiceTab
-from tabs.SubtitlesTab import SubtitlesTab
-from tabs.ListStreams import ListStreamsTab
+from .tabs.ConfigureVoiceTab import ConfigureVoiceTab
+from .tabs.SubtitlesTab import SubtitlesTab
+from .tabs.ListStreams import ListStreamsTab
 import threading
-import utils
-from video import Video
-import app_state
-from video import Video
+from . import utils, app_state
+from .video import Video
 import json
 
 class GUI(wx.Panel):
@@ -155,7 +153,7 @@ class GUI(wx.Panel):
 		dub_thread = threading.Thread(target=app_state.video.run_dubbing, args=(update_progress,))
 		dub_thread.start()
 
-if __name__ == '__main__':
+def weeablind():
 	utils.create_output_dir()
 	app = wx.App(False)
 	frame = wx.Frame(None, wx.ID_ANY, utils.APP_NAME, size=(800, 800))
@@ -163,3 +161,7 @@ if __name__ == '__main__':
 	gui = GUI(frame)
 	frame.Show()
 	app.MainLoop()
+
+
+if __name__ == '__main__':
+	weeablind()

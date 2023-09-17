@@ -1,4 +1,4 @@
-from Voice import Voice
+from .Voice import Voice
 
 video = None
 speakers = [Voice(Voice.VoiceType.COQUI, name="Sample")]

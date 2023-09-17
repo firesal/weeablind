@@ -3,7 +3,7 @@ from pydub import AudioSegment
 
 
 import concurrent.futures
-from utils import get_output_path
+from .utils import get_output_path
 
 
 # This function was intended to run with multiprocessing, but Coqui won't play nice with that.

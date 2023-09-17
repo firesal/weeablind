@@ -1,9 +1,9 @@
-import utils
-import app_state
+from .. import utils
+from .. import app_state
 from pydub.playback import play
 import wx
 import threading
-import diarize
+from .. import diarize
 
 class SubtitleEntry(wx.Panel):
 	def __init__(self, parent, context, sub):

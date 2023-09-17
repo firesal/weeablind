@@ -1,7 +1,7 @@
-import app_state
+from .. import app_state
 import wx
-from Voice import Voice
-import utils
+from ..Voice import Voice
+from .. import utils
 
 class ConfigureVoiceTab(wx.Panel):
 	def __init__(self, notebook, parent):
